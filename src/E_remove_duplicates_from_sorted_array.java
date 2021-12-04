@@ -84,4 +84,23 @@ public class E_remove_duplicates_from_sorted_array {
         }
         return lastIndex;
     }
+
+    /*
+     * Runtime: 0 ms, faster than 100.00% of Java online submissions for Remove
+     * Duplicates from Sorted Array.
+     * Memory Usage: 40.2 MB, less than 91.76% of Java online submissions for Remove
+     * Duplicates from Sorted Array.
+     */
+    static int removeDuplicatesv4(int[] nums) {
+        int lastNumber = -101;
+        int lastIndex = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] != lastNumber) {
+                lastNumber = nums[i];
+                nums[lastIndex] = nums[i];
+                lastIndex++;
+            }
+        }
+        return lastIndex;
+    }
 }
