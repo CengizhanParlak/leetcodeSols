@@ -8,6 +8,7 @@ public class E_merge_two_sorted_lists {
         ListNode() {
         }
 
+
         ListNode(int val) {
             this.val = val;
         }
